@@ -24,12 +24,9 @@ export function MenuSection() {
                       <ArrowUpRight aria-hidden className="size-4" />
                     </span>
                   </div>
-                  <div className="flex items-center justify-between gap-2 p-3 sm:p-4">
-                    <div>
-                      <h3 className="font-display text-lg text-brand sm:text-xl">{m.hi}</h3>
-                      <p className="text-xs font-semibold tracking-wide text-ink/45">{m.en}</p>
-                    </div>
-                    <span aria-hidden className="size-2 shrink-0 rounded-full bg-leaf" />
+                  <div className="p-3 sm:p-4">
+                    <h3 className="font-display text-lg text-brand sm:text-xl">{m.hi}</h3>
+                    <p className="text-xs font-semibold tracking-wide text-ink/45">{m.en}</p>
                   </div>
                 </TiltCard>
               </Reveal>
