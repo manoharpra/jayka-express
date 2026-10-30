@@ -1,4 +1,4 @@
-import { ArrowUpRight, MessageCircle, Phone } from "lucide-react";
+import { MessageCircle, Phone } from "lucide-react";
 import { PHONES } from "@/lib/constants";
 import { CallButton } from "@/components/ui/CallButton";
 import { Reveal } from "@/components/effects/Reveal";
