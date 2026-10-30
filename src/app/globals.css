@@ -12,20 +12,28 @@
   --font-display: var(--font-heading), var(--font-body), serif;
 }
 
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; scroll-padding-top: 5rem; }
 body { background: var(--color-cream); color: var(--color-ink); overflow-x: hidden; }
+::selection { background: #ffc928; color: #241412; }
+a, button { -webkit-tap-highlight-color: transparent; }
+:focus-visible { outline: 3px solid #ffc928; outline-offset: 4px; }
 
+.hero-glow {
+  background:
+    radial-gradient(ellipse at 78% 38%, rgba(169, 21, 32, .42), transparent 48%),
+    radial-gradient(ellipse at 8% 92%, rgba(255, 201, 40, .11), transparent 42%),
+    linear-gradient(115deg, rgba(255,255,255,.025), transparent 50%);
+}
 .tilt {
   --rx: 0deg; --ry: 0deg;
   transform: rotateX(var(--rx)) rotateY(var(--ry));
-  transition: transform 0.2s ease-out, box-shadow 0.2s;
+  transition: transform .2s ease-out, box-shadow .2s;
   will-change: transform;
 }
-.tilt:hover { box-shadow: 0 24px 44px -16px rgba(36, 20, 18, 0.55); }
+.tilt:hover { box-shadow: 0 24px 44px -16px rgba(36, 20, 18, .55); }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
   .tilt { transform: none !important; }
 }
-
